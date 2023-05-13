@@ -49,6 +49,34 @@ body {
     font-size: 2.81vw;
     line-height: 3.65vw;
 }
+.marker {
+    border-radius: 3.13vw;
+    width: 2.08vw;
+    height: 1.25vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.73vw;
+    svg {
+        width: 1.25vw;
+    }
+
+    .check {
+        display: none;
+    }
+    rect {
+        transition: all 1s;
+    }
+    &:hover {
+        .check {
+            display: block;
+        }
+        rect {
+            fill-opacity: 1;
+        }
+    }
+}
 
 .video_wrapper_fixed {
     width: 100vw;
@@ -407,19 +435,6 @@ body {
         .agree_disagree {
             display: flex;
             margin: 2.1vw 0;
-            .marker {
-                cursor: pointer;
-                margin-right: 0.73vw;
-                svg {
-                    width: 1.25vw;
-                }
-
-                &:hover {
-                    rect {
-                        fill-opacity: 1;
-                    }
-                }
-            }
         }
         .conditions {
             font-weight: 500;
@@ -440,6 +455,7 @@ body {
             text-align: center;
             border-radius: 1.56vw;
             color: #42474d;
+            transition: all 0.5s;
             cursor: pointer;
             img {
                 width: 2.08vw;
@@ -595,20 +611,20 @@ body {
     .play_paused {
         position: absolute;
         width: 100%;
-        height: 90%;
+        height: 80%;
         // background-color: rgba(255, 255, 255, 0.1);
         z-index: 2;
         cursor: pointer;
         img {
-            width: 5.208vw;
+            width: 6.208vw;
         }
     }
 
     .play,
     .paused {
         position: absolute;
-        left: 46.9%;
-        top: 44.6%;
+        left: 47.9%;
+        top: 48.6%;
         cursor: pointer;
         z-index: 2;
     }
@@ -781,9 +797,11 @@ body {
         line-height: 3.65vw;
         text-align: center;
     }
-
+    .chedule_intensive_block {
+        overflow: hidden;
+        margin-top: 2.5vw;
+    }
     .header_intensive {
-        margin-top: 2.08vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -831,8 +849,9 @@ body {
     .list_chedule {
         box-shadow: -2px 2px 0.42vw 6px rgba(34, 60, 80, 0.04);
         border-radius: 0 0 2.08vw 2.08vw;
-        transition: all 1s;
-
+        animation: list_chedule 3s forwards;
+        position: relative;
+        z-index: -1;
         li {
             display: flex;
             align-items: center;
@@ -868,6 +887,14 @@ body {
             }
         }
     }
+    @keyframes list_chedule {
+        0% {
+            top: -80vw;
+        }
+        100% {
+            top: 0px;
+        }
+    }
     .chedule_intensive_get_pdf {
         padding: 2.08vw 0;
         display: flex;
@@ -899,6 +926,7 @@ body {
         .input_chedule_intensive_post {
             position: relative;
             top: 1.04vw;
+            animation: input_chedule_intensive_post 1s forwards;
             input {
                 width: 36.46vw;
                 font-weight: 500;
@@ -928,13 +956,21 @@ body {
                 font-size: 0.94vw;
                 height: 3.13vw;
                 color: #ffffff;
-                padding: 0.94vw 1.25vw;
+                padding: 0.94vw 2.25vw;
                 position: absolute;
-                right: 0px;
+                right: -2vw;
                 bottom: 0px;
                 img {
                     padding-left: 0.52vw;
                 }
+            }
+        }
+        @keyframes input_chedule_intensive_post {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
             }
         }
     }
@@ -1610,25 +1646,7 @@ body {
     .faq_form_accept {
         display: flex;
         padding-top: 2.08vw;
-        .marker {
-            background: #ffffff;
-            border-radius: 3.13vw;
-            width: 2.08vw;
-            height: 1.25vw;
-            margin-right: 0.73vw;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            .check_faq {
-                display: none;
-            }
-            &:hover {
-                .check_faq {
-                    display: block;
-                }
-            }
-        }
+
         .accept_conditions {
             font-size: 0.73vw;
             line-height: 1.15vw;

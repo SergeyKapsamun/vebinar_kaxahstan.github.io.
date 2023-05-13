@@ -29,7 +29,7 @@
     <div class="home">
         <!-- VIDEO -->
         <div class="video_front">
-            <video playsinline autoplay muted>
+            <video playsinline autoplay muted loop>
                 <source src="./video/Main.m4v" type="video/mp4">
 
             </video>
@@ -982,7 +982,13 @@
                 </div>
 
                 <div class="conditions_wrapper">
-                    <img src="./images/cost_travel/marker.svg" alt="">
+                    <div class="marker"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none">
+                            <rect width="24" height="24" rx="12" fill="white" fill-opacity="0.4" />
+                            <path d="M16.5714 9L10.8863 15L8 12.0462" stroke="#5CCC81" stroke-width="1.4"
+                                stroke-miterlimit="10" stroke-linejoin="round" />
+
+                        </svg></div>
                     <div class="conditions"> Я согласен с условиями и <a href="#">политикой
                             конфиденциальности</a> и <a href="#">оброботкой персональных данных</a></div>
                 </div>
@@ -1062,6 +1068,29 @@
                                 <div class="subtitle">Каждое обучение завершается торжественным вручением сертификатов и
                                     символа школы - стеклянного яблока. Изысканная музыка, угощения и живое общение с
                                     коллегами-единомышленниками сделают этот вечер незабываемым. </div>
+                                <div class="arrows">
+                                    <div class="swiper-button-next swiper-button-next-swiper_what_is_there"></div>
+                                    <div class="swiper-button-prev swiper-button-prev-swiper_what_is_there"></div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- wrap slide content with transform element -->
+
+                        <div class="what_is_there_wrapper">
+                            <div class="what_is_there_left">
+                                <img class="main_picture" src="./images/what_is_there/4.png" alt="">
+                                <img class="background_picture" src="./images/what_is_there/green_card.png" alt="">
+                            </div>
+                            <div class="what_is_there_right">
+                                <div class="title">Кто может принять участие в обучении Anti-Age?</div>
+                                <div class="subtitle">Экспертная школа будет полезна для врача любой специальности,
+                                    потому что знания о генетике, которые вы здесь получите, дают возможность еще более
+                                    персонализировано работать с каждым пациентом. И это совершенно новый уровень
+                                    антивозрастной медицины.</div>
                                 <div class="arrows">
                                     <div class="swiper-button-next swiper-button-next-swiper_what_is_there"></div>
                                     <div class="swiper-button-prev swiper-button-prev-swiper_what_is_there"></div>
@@ -1323,13 +1352,14 @@
             </div>
 
         </div>
+        <a href="#" class="btn_review">
+            Принять участие <img src="./images/review/Arrow_white.svg" alt="">
+        </a>
     </div>
 
     <!-- If we need navigation buttons -->
 
-    <a href="#" class="btn_review">
-        Принять участие <img src="./images/review/Arrow_white.svg" alt="">
-    </a>
+
 
     </div>
 
@@ -1468,9 +1498,13 @@
                     <input type="tel" placeholder="Телефон">
                     <input type="email" placeholder="Е-mail">
                     <div class="faq_form_accept">
-                        <div class="marker">
-                            <img class="check_faq" src="./images/faq/check_mark.svg" alt="">
-                        </div>
+                        <div class="marker"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24" fill="none">
+                                <rect width="24" height="24" rx="12" fill="white" fill-opacity="0.4" />
+                                <path d="M16.5714 9L10.8863 15L8 12.0462" stroke="#5CCC81" stroke-width="1.4"
+                                    stroke-miterlimit="10" stroke-linejoin="round" />
+
+                            </svg></div>
                         <div class="accept_conditions">Я согласен с условиями и <a href="#"> политикой
                                 конфиденциальности</a> и
                             <a href="#"> оброботкой персональных данных</a>

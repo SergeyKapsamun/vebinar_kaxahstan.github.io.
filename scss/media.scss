@@ -7,6 +7,14 @@
     .container {
         padding: 0 2%;
     }
+    .marker {
+        width: 7vw;
+        height: 4.25vw;
+
+        svg {
+            width: 7.25vw;
+        }
+    }
     .header {
         align-items: center;
         flex-direction: column;
@@ -58,6 +66,10 @@
         font-weight: 500;
         font-size: 2.1vw;
         line-height: 2.5vw;
+    }
+    .home .home_midle_left ul li img {
+        margin-right: 1.04vw;
+        width: 3.458vw;
     }
     .home .home_midle_left .companies {
         display: flex;
@@ -112,14 +124,7 @@
         font-size: 2.73vw;
         line-height: 3.2vw;
     }
-    .home .home_midle_right_bottom .agree_disagree .marker {
-        margin-right: 5.73vw;
-    }
-    .home .home_midle_right_bottom .agree_disagree .marker svg {
-        width: 6.25vw;
-        display: block;
-        height: 6.25vw;
-    }
+
     .home .home_midle_right_bottom .button_accept {
         font-size: 3.9vw;
         padding: 3vw 0;
@@ -205,6 +210,14 @@
     }
     .video_wrapper {
         height: 47.458vw;
+    }
+    .video_wrapper .play,
+    .video_wrapper .paused {
+        left: 44.9%;
+        top: 40.6%;
+    }
+    .video_wrapper .play_paused img {
+        width: 13.208vw;
     }
     // why_participate
     .why_participate_wrapper .why_participate .why_participate_container .title {
@@ -345,7 +358,9 @@
         width: 80vw;
         font-size: 2.94vw;
         height: 7.13vw;
-        padding: 0 3vw;
+
+        padding-left: 3vw;
+        padding-right: 19vw;
         border-radius: 10vw;
     }
     .chedule_intensive .chedule_intensive_get_pdf .input_chedule_intensive_post .btn_input_post {
@@ -476,8 +491,8 @@
         line-height: 4.25vw;
     }
     .cost_travel .right_block .conditions {
-        font-size: 1.83vw;
-        line-height: 2.04vw;
+        font-size: 2.73vw;
+        line-height: 3.04vw;
         color: #fff;
     }
     .cost_travel .right_block .conditions_wrapper img {
@@ -555,6 +570,7 @@
         margin-top: 5vw;
         padding: 2.08vw 1.56vw;
         width: 100%;
+        height: 69vw;
     }
     .faq_form .subtitle {
         margin: 0.52vw 0;
@@ -569,12 +585,9 @@
 
         font-size: 2.94vw;
     }
-    .faq_form .faq_form_accept .marker {
-        width: 4.08vw;
-        height: 3.58vw;
-    }
+
     .faq_form .faq_form_accept .accept_conditions {
-        font-size: 1.73vw;
+        font-size: 2.73vw;
         line-height: 3.15vw;
     }
     .faq_form .btn_application {
@@ -783,13 +796,13 @@
                     right: 20px;
                 }
                 .name {
-                    font-size: 3vw;
+                    font-size: 1.5vw;
                 }
             }
             .item-content {
                 padding: 10px 0;
                 span {
-                    font-size: 2vw;
+                    font-size: 1vw;
                     line-height: 1.6;
                     margin-bottom: 10px;
                     &:last-child {
