@@ -8,6 +8,9 @@ function player() {
   video_wrapper.addEventListener("mousemove", () => {
     play_paused.style.display = "block";
   });
+  video_wrapper.addEventListener("ended", () => {
+    play_paused.style.display = "block";
+  });
   video_wrapper.addEventListener("mouseout", () => {
     if (video_anti_age.play) {
       play_paused.style.display = "none";
@@ -29,14 +32,19 @@ function player() {
     }
   });
 }
-// document.querySelectorAll("video").forEach((elem) => {
-//   elem.addEventListener("mediaEvents", function () {
-//     console.log("work");
-//     this.src = this.src;
-//   });
-// });
+document.querySelectorAll("video").forEach((elem) => {
+  elem.addEventListener("ended", function () {
+    console.log("work");
+    this.src = this.src;
+  });
+});
 let play_paused_review = document.querySelectorAll(".play_paused_review");
 play_paused_review.forEach((elem) => {
+  elem.previousElementSibling.addEventListener("ended", function () {
+    let play_review = elem.children[0];
+    play_review.style.display = "block";
+  });
+
   elem.addEventListener("click", function () {
     let play_review = this.children[0];
     let paused_review = this.children[1];
