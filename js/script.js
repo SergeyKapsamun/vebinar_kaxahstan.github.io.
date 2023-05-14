@@ -29,12 +29,12 @@ function player() {
     }
   });
 }
-document.querySelectorAll("video").forEach((elem) => {
-  elem.addEventListener("mediaEvents", function () {
-    console.log("work");
-    this.src = this.src;
-  });
-});
+// document.querySelectorAll("video").forEach((elem) => {
+//   elem.addEventListener("mediaEvents", function () {
+//     console.log("work");
+//     this.src = this.src;
+//   });
+// });
 let play_paused_review = document.querySelectorAll(".play_paused_review");
 play_paused_review.forEach((elem) => {
   elem.addEventListener("click", function () {
