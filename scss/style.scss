@@ -30,6 +30,26 @@ html {
     background: #4da2d6;
     border-radius: 0.26vw;
 }
+*::-webkit-media-controls-panel {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+/* Old shadow dom for play button */
+
+*::-webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+/* New shadow dom for play button */
+
+/* This one works! */
+
+*::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
 
 .container {
     padding: 0 7.81%;
@@ -75,6 +95,14 @@ body {
         rect {
             fill-opacity: 1;
         }
+    }
+}
+.active_marker {
+    .check {
+        display: block;
+    }
+    rect {
+        fill-opacity: 1;
     }
 }
 
@@ -849,9 +877,9 @@ body {
     .list_chedule {
         box-shadow: -2px 2px 0.42vw 6px rgba(34, 60, 80, 0.04);
         border-radius: 0 0 2.08vw 2.08vw;
-        animation: list_chedule 3s forwards;
-        position: relative;
-        z-index: -1;
+        // animation: list_chedule 3s forwards;
+        // position: relative;
+        // z-index: -1;
         li {
             display: flex;
             align-items: center;
@@ -877,7 +905,7 @@ body {
             }
             .list_chedule_right {
                 font-weight: 600;
-                font-size: 1.25vw;
+                font-size: 0.938vw;
                 line-height: 1.25vw;
                 width: 16%;
             }
@@ -887,14 +915,14 @@ body {
             }
         }
     }
-    @keyframes list_chedule {
-        0% {
-            top: -80vw;
-        }
-        100% {
-            top: 0px;
-        }
-    }
+    // @keyframes list_chedule {
+    //     0% {
+    //         top: -80vw;
+    //     }
+    //     100% {
+    //         top: 0px;
+    //     }
+    // }
     .chedule_intensive_get_pdf {
         padding: 2.08vw 0;
         display: flex;
@@ -936,13 +964,10 @@ body {
                 border-radius: 1.56vw;
                 height: 3.13vw;
                 padding: 0.94vw 10.42vw 0.94vw 1.25vw;
-                border-color: rgba(82, 82, 82, 0.2);
+                border: none;
 
                 color: #42474d;
                 &::placeholder {
-                    font-weight: 500;
-                    font-size: 0.94vw;
-                    line-height: 1.25vw;
                     color: #828d99;
                 }
             }
@@ -1113,17 +1138,21 @@ body {
     position: relative;
     padding-top: 7.14vw;
     padding-bottom: 6.2vw;
+
     .container {
         display: flex;
         justify-content: space-between;
     }
     .cost_travel_wrapper {
         position: absolute;
-        bottom: -4.58vw;
+        bottom: 0px;
+        left: -0.5vw;
         width: 100%;
         z-index: 1;
         height: 100%;
         background-image: url("../images/cost_travel/Intersect.png");
+        background-size: cover;
+
         background-repeat: no-repeat;
         mix-blend-mode: multiply;
     }
@@ -1183,6 +1212,7 @@ body {
     .cost_travel_left_bottom {
         display: flex;
         align-items: flex-end;
+        white-space: nowrap;
         padding-top: 2.97vw;
         .cost {
             color: #ffffff;
@@ -1405,6 +1435,10 @@ body {
                     align-items: center;
                     background: #ffffff;
                     border-radius: 50%;
+                    transition: all 1s;
+                    &:hover {
+                        background-color: #b6b6b6;
+                    }
                     &:last-child {
                         margin-right: 0;
                     }
@@ -1669,8 +1703,9 @@ body {
         cursor: pointer;
         margin-top: 2.08vw;
         margin-bottom: 0.52vw;
+        transition: all 0.5s;
         &:hover {
-            box-shadow: 0px 0.52vw 1.56vw rgba(92, 204, 129, 0.8);
+            box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.3);
         }
     }
     .btn_call {
@@ -1682,6 +1717,10 @@ body {
         color: #ffffff;
         font-size: 0.83vw;
         cursor: pointer;
+        transition: all 0.5s;
+        &:hover {
+            box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.3);
+        }
     }
 }
 // <-----------------faq------------->

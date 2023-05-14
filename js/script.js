@@ -82,6 +82,13 @@ btn_get_pdf.addEventListener("click", function () {
 });
 //  chedule_intensive_end
 
+const marker = document.querySelectorAll(".marker");
+marker.forEach((elem) => {
+  elem.addEventListener("click", function () {
+    this.classList.toggle("active_marker");
+  });
+});
+
 // faq
 const faq = document.querySelectorAll("[faq-js] .item");
 
