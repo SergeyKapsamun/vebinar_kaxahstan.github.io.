@@ -17,21 +17,24 @@ function player() {
     }
   });
   play_paused.addEventListener("click", function playPause() {
-    if (video_anti_age.paused) {
-      this.style.display = "none";
+    if (video_anti_age.paused || video_anti_age.playing) {
       video_anti_age.play();
       play.style.display = "none";
-      paused.style.display = "block";
+      paused.style.display = "none";
     } else {
       video_anti_age.pause();
-      this.style.display = "block";
+
       play.style.display = "block";
       paused.style.display = "none";
-      play_paused.style.display = "block";
     }
   });
 }
-
+document.querySelectorAll("video").forEach((elem) => {
+  elem.addEventListener("mediaEvents", function () {
+    console.log("work");
+    this.src = this.src;
+  });
+});
 let play_paused_review = document.querySelectorAll(".play_paused_review");
 play_paused_review.forEach((elem) => {
   elem.addEventListener("click", function () {
@@ -47,8 +50,8 @@ play_paused_review.forEach((elem) => {
       play_review.style.display = "none";
     } else {
       this.previousElementSibling.pause();
-      paused_review.style.display = "block";
-      play_review.style.display = "none";
+      paused_review.style.display = "none";
+      play_review.style.display = "block";
     }
   });
 });
