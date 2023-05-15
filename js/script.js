@@ -32,12 +32,13 @@ function player() {
     }
   });
 }
+// обновлет фотки после окончания воспроизведения
 document.querySelectorAll("video").forEach((elem) => {
   elem.addEventListener("ended", function () {
-    console.log("work");
     this.src = this.src;
   });
 });
+
 let play_paused_review = document.querySelectorAll(".play_paused_review");
 play_paused_review.forEach((elem) => {
   elem.previousElementSibling.addEventListener("ended", function () {
@@ -66,6 +67,7 @@ play_paused_review.forEach((elem) => {
 
 player();
 // player_end
+
 //  chedule_intensive
 let chedule_intensive_block = document.querySelectorAll(
   ".chedule_intensive_block"
@@ -194,27 +196,33 @@ const swiperStepsExpert = new Swiper(".swiper-steps-expert", {
 
 const swiperMentoring = new Swiper(".swiper-mentoring", {
   // Default parameters
-  slidesPerView: 1,
-  spaceBetween: 70,
-  centeredSlides: true,
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    // when window width is >= 640px
-    1080: {
-      slidesPerView: 1,
-      spaceBetween: 70,
-    },
+  cssMode: true,
+
+  pagination: {
+    el: ".swiper-pagination",
   },
+  mousewheel: true,
+  keyboard: true,
   navigation: {
     nextEl: ".swiper-button-next-mentoring",
     prevEl: ".swiper-button-prev-mentoring",
   },
 });
+const swiperReview_more = new Swiper(".doctors_reviews_more_wrapper", {
+  // Default parameters
+  cssMode: true,
 
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-review_more",
+    prevEl: ".swiper-button-prev-review_more",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
 const swiperReview = new Swiper(".swiper-review", {
   // Default parameters
   slidesPerView: 2,
@@ -254,11 +262,13 @@ const swiperReviewVideo = new Swiper(".swiper-review-video", {
   slidesPerView: "auto",
   spaceBetween: 0,
   centeredSlides: true,
+
   navigation: {
     nextEl: ".swiper-button-next-review-video",
     prevEl: ".swiper-button-prev-review-video",
   },
 });
+
 const swiperWhatIsThere = new Swiper(".swiper_what_is_there", {
   // Default parameters
   slidesPerView: "auto",
@@ -316,3 +326,17 @@ const swiperPersonal = new Swiper(".swiper-personal", {
   },
 });
 // /
+const review_closed = document.querySelector(".review_closed");
+review_closed.addEventListener("click", function () {
+  this.parentElement.style.visibility = "hidden";
+});
+const doctors_reviews_more_wrapper = document.querySelector(
+  ".doctors_reviews_more_wrapper"
+);
+const details_review = document.querySelectorAll(".details_review");
+details_review.forEach((elem) => {
+  elem.addEventListener("click", function () {
+    swiperReview_more.slideTo(swiperReview.clickedIndex);
+    doctors_reviews_more_wrapper.style.visibility = "visible";
+  });
+});
