@@ -38,6 +38,25 @@ document.querySelectorAll("video").forEach((elem) => {
     this.src = this.src;
   });
 });
+// видео в слайдерах what_is_there_wrapper_video
+const wrapper_video=document.querySelector('.wrapper_video');
+const wrapper_video_closed=document.querySelector('.wrapper_video_closed');
+wrapper_video_closed.addEventListener('click',function(){
+  this.parentElement.style.visibility='hidden';
+wrapper_video.children[0].pause()
+
+})
+const what_is_there_wrapper_video=document.querySelectorAll('.what_is_there_wrapper_video');
+what_is_there_wrapper_video.forEach((elem)=>{
+  elem.addEventListener('click',function(){
+  const numberVideo= this.getAttribute('data-video');
+  wrapper_video.children[0].src=`./video/what_is_there/${numberVideo}.m4v`;
+    wrapper_video.children[0].play()
+  wrapper_video.style.visibility='visible';
+
+
+  })
+})
 
 let play_paused_review = document.querySelectorAll(".play_paused_review");
 play_paused_review.forEach((elem) => {
@@ -269,16 +288,37 @@ const swiperReviewVideo = new Swiper(".swiper-review-video", {
   },
 });
 
-const swiperWhatIsThere = new Swiper(".swiper_what_is_there", {
+const what_is_there_one = new Swiper(".what_is_there_one", {
   // Default parameters
-  slidesPerView: "auto",
-  spaceBetween: 0,
+  slidesPerView:1,
+  spaceBetween: 10,
   centeredSlides: true,
   navigation: {
-    nextEl: ".swiper-button-next-swiper_what_is_there",
-    prevEl: ".swiper-button-prev-swiper_what_is_there",
+    nextEl: ".swiper-button-next-swiper_what_is_there_one",
+    prevEl: ".swiper-button-prev-swiper_what_is_there_one",
   },
 });
+const what_is_there_two = new Swiper(".what_is_there_two", {
+  // Default parameters
+  slidesPerView:1,
+  spaceBetween: 10,
+  centeredSlides: true,
+  navigation: {
+    nextEl: ".swiper-button-next-swiper_what_is_there_two",
+    prevEl: ".swiper-button-prev-swiper_what_is_there_two",
+  },
+});
+const what_is_there_three = new Swiper(".what_is_there_three", {
+  // Default parameters
+  slidesPerView:1,
+  spaceBetween: 10,
+  centeredSlides: true,
+  navigation: {
+    nextEl: ".swiper-button-next-swiper_what_is_there_three",
+    prevEl: ".swiper-button-prev-swiper_what_is_there_three",
+  },
+});
+
 
 const swiperProgram = new Swiper(".swiper-experts-word", {
   // Default parameters
