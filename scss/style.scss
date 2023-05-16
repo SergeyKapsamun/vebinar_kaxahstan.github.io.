@@ -487,105 +487,50 @@ body {
 }
 // <--------------cards------------->
 // <--------------education------------->
+
 .education {
-    margin-top: 13.44vw;
-    .what_is_there {
-        background: none;
-    }
-    .title {
-        font-weight: 500;
-        font-size: 2.81vw;
-        line-height: 3.65vw;
-        text-align: center;
-    }
-    .cards_education {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 4.64vw;
-        .card_education {
-            // width: 49.1%;
-            width: 41.46vw;
-            // height: 47.5vh;
-            .card_top_education {
-                position: relative;
-
-                padding: 2.76vw 2.08vw;
-
-                background: #f5f7f5;
-                border-radius: 1.56vw 1.56vw 0px 0px;
-                .card_top_left {
-                    width: 43.1%;
-                    .title {
-                        font-weight: 500;
-                        font-size: 2.08vw;
-                        line-height: 2.4vw;
-                        text-align: left;
-                        margin-bottom: 1.88vw;
-                    }
-                    .subtitle {
-                        font-weight: 500;
-                        font-size: 0.83vw;
-                        line-height: 1.35vw;
-                        color: #828d99;
-                    }
-                }
-            }
-            .card_top_right {
-                img {
-                    position: absolute;
-                    bottom: 0px;
-                    left: 20.6vw;
-                    width: 19.27vw;
-                }
-                .card_top_right_edit {
-                    bottom: -4.486px;
-                    left: 21.6vw;
-                    width: 20.63vw;
-                }
-            }
+    display: flex;
+    margin-top: 15.625vw;
+    align-items: center;
+    .education_left {
+        position: relative;
+        .main_foto {
+            position: relative;
+            border-radius: 0.521vw 19.792vw;
+            width: 40.625vw;
+            height: 36.458vw;
+            z-index: 1;
         }
-        .card_bottom {
+        .education_back {
+            position: absolute;
             background: #5ccc81;
-
-            border-radius: 0px 0px 1.56vw 1.56vw;
-            padding: 1.35vw 3.13vw;
-            font-size: 0.83vw;
-            display: flex;
-            color: #ffffff;
-            img {
-                width: 2.083vw;
-            }
-            span {
-                padding-top: 2px;
-                padding-left: 0.52vw;
-            }
-            &:hover {
-                box-shadow: 0px 0.78vw 1.3vw rgba(92, 204, 129, 0.35);
-            }
-        }
-        .card_bottom_edit {
-            background: #4da2d6;
-            &:hover {
-                box-shadow: 0px 0.78vw 1.3vw rgba(77, 162, 214, 0.35);
-            }
+            border-radius: 0.521vw 20.833vw;
+            width: 100%;
+            height: 100%;
+            top: 1.563vw;
+            left: -1.563vw;
         }
     }
+    .education_right {
+        padding-left: 6.25vw;
+    }
+    .subtitle {
+        font-size: 1.25vw;
+        line-height: 1.771vw;
+    }
 }
-
 .title_age {
-    font-size: 2.08vw;
-    line-height: 2.76vw;
+    font-size: 2.083vw;
+    line-height: 2.396vw;
     text-align: center;
-    margin-top: 4.64vw;
+    padding-bottom: 1.042vw;
+    padding-top: 7.813vw;
 }
-
 .subtitle_age {
-    font-size: 1.25vw;
-    line-height: 1.56vw;
+    font-weight: 600;
+    font-size: 1.042vw;
+    line-height: 1.563vw;
     text-align: center;
-    span {
-        font-weight: 600;
-    }
 }
 // <--------------education------------->
 // <--------------video_wrapper------------->
@@ -595,7 +540,7 @@ body {
     width: 100%;
     height: 36.458vw;
     z-index: 1;
-    bottom: -7.45vw;
+    bottom: -6.25vw;
     .play_paused {
         position: absolute;
         width: 100%;
@@ -687,11 +632,13 @@ body {
                 .points_title_subtitle {
                     display: flex;
                     flex-direction: column;
-                    padding-left: 2.92vw;
+                    padding-left: 2.083vw;
+
                     .points_title {
                         font-weight: 500;
                         font-size: 1.56vw;
                         line-height: 1.88vw;
+                        padding-bottom: 1.042vw;
                     }
                     .points_subtitle {
                         font-weight: 500;
@@ -835,7 +782,7 @@ body {
         border-radius: 2.08vw;
     }
     .list_chedule {
-        box-shadow: -2px 2px 0.42vw 6px rgba(34, 60, 80, 0.04);
+        box-shadow: -2px 2px 0.42vw 6px rgba(34, 60, 80, 0.4);
         border-radius: 0 0 2.08vw 2.08vw;
         // animation: list_chedule 3s forwards;
         // position: relative;

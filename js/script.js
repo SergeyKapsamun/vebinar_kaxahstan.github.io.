@@ -32,6 +32,14 @@ function player() {
     }
   });
 }
+let play_paused = document.querySelector(".play_paused");
+let video_anti_age = document.querySelector(".video_anti_age");
+play_paused.addEventListener("click", function () {
+  video_anti_age.play();
+  video_anti_age.setAttribute("controls", "controls");
+
+  this.style.display = "none";
+});
 // обновлет фотки после окончания воспроизведения
 document.querySelectorAll("video").forEach((elem) => {
   elem.addEventListener("ended", function () {
@@ -39,24 +47,23 @@ document.querySelectorAll("video").forEach((elem) => {
   });
 });
 // видео в слайдерах what_is_there_wrapper_video
-const wrapper_video=document.querySelector('.wrapper_video');
-const wrapper_video_closed=document.querySelector('.wrapper_video_closed');
-wrapper_video_closed.addEventListener('click',function(){
-  this.parentElement.style.visibility='hidden';
-wrapper_video.children[0].pause()
-
-})
-const what_is_there_wrapper_video=document.querySelectorAll('.what_is_there_wrapper_video');
-what_is_there_wrapper_video.forEach((elem)=>{
-  elem.addEventListener('click',function(){
-  const numberVideo= this.getAttribute('data-video');
-  wrapper_video.children[0].src=`./video/what_is_there/${numberVideo}.m4v`;
-    wrapper_video.children[0].play()
-  wrapper_video.style.visibility='visible';
-
-
-  })
-})
+const wrapper_video = document.querySelector(".wrapper_video");
+const wrapper_video_closed = document.querySelector(".wrapper_video_closed");
+wrapper_video_closed.addEventListener("click", function () {
+  this.parentElement.style.visibility = "hidden";
+  wrapper_video.children[0].pause();
+});
+const what_is_there_wrapper_video = document.querySelectorAll(
+  ".what_is_there_wrapper_video"
+);
+what_is_there_wrapper_video.forEach((elem) => {
+  elem.addEventListener("click", function () {
+    const numberVideo = this.getAttribute("data-video");
+    wrapper_video.children[0].src = `./video/what_is_there/${numberVideo}.m4v`;
+    wrapper_video.children[0].play();
+    wrapper_video.style.visibility = "visible";
+  });
+});
 
 let play_paused_review = document.querySelectorAll(".play_paused_review");
 play_paused_review.forEach((elem) => {
@@ -84,7 +91,6 @@ play_paused_review.forEach((elem) => {
   });
 });
 
-player();
 // player_end
 
 //  chedule_intensive
@@ -290,7 +296,7 @@ const swiperReviewVideo = new Swiper(".swiper-review-video", {
 
 const what_is_there_one = new Swiper(".what_is_there_one", {
   // Default parameters
-  slidesPerView:1,
+  slidesPerView: 1,
   spaceBetween: 10,
   centeredSlides: true,
   navigation: {
@@ -300,7 +306,7 @@ const what_is_there_one = new Swiper(".what_is_there_one", {
 });
 const what_is_there_two = new Swiper(".what_is_there_two", {
   // Default parameters
-  slidesPerView:1,
+  slidesPerView: 1,
   spaceBetween: 10,
   centeredSlides: true,
   navigation: {
@@ -310,7 +316,7 @@ const what_is_there_two = new Swiper(".what_is_there_two", {
 });
 const what_is_there_three = new Swiper(".what_is_there_three", {
   // Default parameters
-  slidesPerView:1,
+  slidesPerView: 1,
   spaceBetween: 10,
   centeredSlides: true,
   navigation: {
@@ -318,7 +324,6 @@ const what_is_there_three = new Swiper(".what_is_there_three", {
     prevEl: ".swiper-button-prev-swiper_what_is_there_three",
   },
 });
-
 
 const swiperProgram = new Swiper(".swiper-experts-word", {
   // Default parameters
