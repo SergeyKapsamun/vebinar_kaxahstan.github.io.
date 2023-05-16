@@ -293,7 +293,7 @@ const swiperReviewVideo = new Swiper(".swiper-review-video", {
     prevEl: ".swiper-button-prev-review-video",
   },
 });
-
+swiperReviewVideo.slideTo(2);
 const what_is_there_one = new Swiper(".what_is_there_one", {
   // Default parameters
   slidesPerView: 1,
