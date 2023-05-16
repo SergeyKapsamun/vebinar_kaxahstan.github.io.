@@ -561,48 +561,36 @@
     }
     // cards_end
     // education
+    .education {
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+    .education .education_left .main_foto {
+        width: 80.63vw;
+        border-radius: 1.52vw 40.79vw;
+        height: auto;
+    }
+    .education .education_left .education_back {
+        width: 96%;
+        height: 95%;
+        top: 6.563vw;
+        left: -3.563vw;
+        border-radius: 1.52vw 40.79vw;
+    }
+    .education .education_right {
+        padding: 7vw;
+    }
     .education .title {
         font-size: 4.81vw;
         line-height: 5.65vw;
+        text-align: center;
     }
-    .education .cards_education {
-        flex-direction: column;
-        align-items: center;
+    .education .subtitle {
+        padding-top: 2vw;
+        font-size: 3.25vw;
+        line-height: 3.771vw;
     }
-    .education .cards_education .card_education {
-        width: 100%;
-        margin-top: 6vw;
-    }
-    .education .cards_education .card_education .card_top_education {
-        padding: 5.76vw 4.08vw;
-    }
-    .education .cards_education .card_education .card_top_education .card_top_left {
-        width: 68.1%;
-    }
-    .education .cards_education .card_education .card_top_education .card_top_left .title {
-        font-size: 3.08vw;
-        line-height: 4.4vw;
-    }
-    .education .cards_education .card_education .card_top_education .card_top_left .subtitle {
-        font-size: 1.83vw;
-        line-height: 2.35vw;
-    }
-    .education .cards_education .card_education .card_top_right img {
-        left: 66.6vw;
-        width: 24.27vw;
-    }
-    .education .cards_education .card_education .card_top_right .card_top_right_edit {
-        bottom: -3.486px;
-        left: 66.6vw;
-        width: 30.63vw;
-    }
-    .education .cards_education .card_bottom {
-        padding: 2.35vw 3.13vw;
-        font-size: 2.83vw;
-    }
-    .education .cards_education .card_bottom img {
-        width: 5.083vw;
-    }
+
     // education_end
     .title_age {
         font-size: 4.81vw;
@@ -919,33 +907,80 @@
         justify-content: center;
     }
 
-    .what_is_there .what_is_there_wrapper {
+    .what_is_there .container {
         display: flex;
         align-items: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    .what_is_there .swiper_what_is_there {
+        width: 100%;
+        text-align: center;
+    }
+    .what_is_there .main_picture {
+        width: 80.63vw;
+        border-radius: 1.52vw 40.79vw;
+    }
+    .what_is_there .main_picture_reverse {
+        border-radius: 40.79vw 1.52vw;
+    }
+    .what_is_there .container .back .background_picture {
+        width: 76.63vw;
+        height: 54.63vw;
+        border-radius: 1.52vw 40.79vw;
+    }
+    .what_is_there .container .back .background_picture_blue {
+        width: 76.63vw;
+        height: 54.63vw;
+        border-radius: 40.79vw 1.52vw;
+    }
+    .what_is_there .container .back {
+        left: 8.29vw;
+        top: 14.81vw;
+    }
+    .what_is_there .what_is_there_reverse .back {
+        left: 17.29vw;
     }
     .what_is_there .what_is_there_right {
         width: 100%;
-        align-items: center;
+        padding: 10vw 0 0 0;
     }
     .what_is_there .what_is_there_right .title {
         font-size: 4.81vw;
-        line-height: 5.65vw;
+        line-height: 3.65vw;
+        text-align: center;
+        width: 100%;
     }
     .what_is_there .what_is_there_right .subtitle {
         font-size: 3.04vw;
         line-height: 3.77vw;
-        padding-top: 2.08vw;
+    }
+    .what_is_there .what_is_there_reverse .what_is_there_right {
+        width: 100%;
+        padding: 10vw 0 0 0;
+        .title {
+            font-size: 4.81vw;
+            line-height: 3.65vw;
+            text-align: center;
+            width: 100%;
+        }
+        .subtitle {
+            font-size: 3.04vw;
+            line-height: 3.77vw;
+        }
     }
     .what_is_there .what_is_there_right .arrows {
-        left: -42.52vw;
-        top: 22.34vw;
+        left: 34.48vw;
+        top: 1.34vw;
+        padding: 7vw 0;
     }
     .what_is_there .what_is_there_right .arrows .swiper-button-next {
-        left: 76.69vw;
+        position: absolute;
+        left: 15.69vw;
     }
-    .what_is_there .what_is_there_left {
-        margin-top: 6vw;
+    .what_is_there .what_is_there_wrapper_video .play {
+        top: 26%;
+        left: 34%;
+        width: 25.21vw;
     }
     .review .multi-title {
         margin-bottom: 4px;

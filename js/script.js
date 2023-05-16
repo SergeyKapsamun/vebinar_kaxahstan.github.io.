@@ -53,6 +53,10 @@ wrapper_video_closed.addEventListener("click", function () {
   this.parentElement.style.visibility = "hidden";
   wrapper_video.children[0].pause();
 });
+wrapper_video.addEventListener("click", function () {
+  this.style.visibility = "hidden";
+  wrapper_video.children[0].pause();
+});
 const what_is_there_wrapper_video = document.querySelectorAll(
   ".what_is_there_wrapper_video"
 );

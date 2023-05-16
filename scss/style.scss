@@ -1564,14 +1564,17 @@ body {
     display: flex;
     flex-direction: column;
     padding: 2.08vw;
+    overflow: scroll;
 
     width: 72.92vw;
-    height: 97%;
+    height: 40.313vw;
 
     background: #ffffff;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
     border-radius: 2.08vw;
-
+    &::-webkit-scrollbar {
+        display: none;
+    }
     .top {
         display: flex;
         align-items: center;
@@ -2355,7 +2358,7 @@ body {
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.7);
     video {
-        width: 50%;
+        width: 95%;
         border-radius: 10%;
     }
     .wrapper_video_closed {
