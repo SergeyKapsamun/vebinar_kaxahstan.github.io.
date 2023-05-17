@@ -79,6 +79,7 @@ play_paused_review.forEach((elem) => {
   elem.addEventListener("click", function () {
     let review_video_weapper=document.querySelectorAll('.review_video_weapper');
     review_video_weapper.forEach((element)=>{
+      swiperReviewVideo.slideTo(swiperReviewVideo.clickedIndex);
       element.children[0].pause();
     })
     let play_review = this.children[0];

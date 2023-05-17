@@ -738,9 +738,10 @@ body {
     .chedule_intensive_block {
         overflow: hidden;
         margin-top: 2.5vw;
+        box-shadow: 0px 0.99vw 1.521vw -0.479vw rgb(34 60 80 / 11%);
+        border-radius: 3%;
     }
     .header_intensive {
-        margin: 0 0.156vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -786,14 +787,6 @@ body {
         border-radius: 2.08vw;
     }
     .list_chedule {
-        // border-radius: 0 0 2.08vw 2.08vw;
-        margin: 0 0.156vw 0.365vw 0.156vw;
-
-        box-shadow: 0px 0.99vw 0.521vw 0.521vw rgba(34, 60, 80, 0.11);
-        // animation: list_chedule 3s forwards;
-        // position: relative;
-        // z-index: -1;
-
         li {
             display: flex;
             align-items: center;
