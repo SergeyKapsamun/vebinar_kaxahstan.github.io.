@@ -782,6 +782,10 @@
         display: flex;
         width: auto;
     }
+    .experts_world .swiper .swiper-slide {
+        width: 41.08vw;
+        height: 94vw;
+    }
     // swiper
     .swiper-button-prev,
     .swiper-button-next {
@@ -982,6 +986,11 @@
         left: 34%;
         width: 25.21vw;
     }
+    .wrapper_video .wrapper_video_closed {
+        width: 5.73vw;
+        top: 4.54vw;
+        right: 4.08vw;
+    }
     .review .multi-title {
         margin-bottom: 4px;
         font-size: 4.81vw;
@@ -1057,6 +1066,35 @@
         line-height: 7.25vw;
         margin-bottom: 1vw;
         margin-top: 0.5vw;
+    }
+    .doctors_reviews_more_wrapper .title {
+        font-size: 5.81vw;
+        line-height: 6.65vw;
+    }
+    .doctors_reviews_more {
+        width: 72.92vw;
+        height: 120.313vw;
+        background: #fff;
+    }
+    .doctors_reviews_more .top {
+        flex-direction: column;
+    }
+    .doctors_reviews_more .top .img img {
+        width: 20.29vw;
+    }
+    .doctors_reviews_more .top .person .name {
+        font-size: 4.25vw;
+        line-height: 4.77vw;
+        text-align: center;
+        width: 100%;
+    }
+    .doctors_reviews_more .top .person .place {
+        font-size: 1.83vw;
+        line-height: 2.15vw;
+    }
+    .doctors_reviews_more .content .text {
+        font-size: 1.83vw;
+        line-height: 2.35vw;
     }
 }
 
@@ -1358,6 +1396,68 @@
     }
     .review-items .swiper .swiper-button-prev {
         left: 5vw;
+    }
+    .doctors_reviews_more {
+        height: 151.313vw;
+        padding: 3.08vw;
+        width: 77.92vw;
+    }
+    .doctors_reviews_more .top .img img {
+        width: 24.29vw;
+    }
+    .doctors_reviews_more .top .person .name {
+        font-size: 5.25vw;
+        line-height: 8.77vw;
+    }
+    .doctors_reviews_more .top .person .place {
+        font-size: 2.83vw;
+        line-height: 3.15vw;
+    }
+    .doctors_reviews_more .content .text {
+        font-size: 2.83vw;
+        line-height: 3.35vw;
+    }
+    .doctors_reviews_more_wrapper .title {
+        font-size: 7.81vw;
+        line-height: 3.65vw;
+    }
+    .experts_world .swiper .swiper-slide {
+        width: 96.08vw;
+        height: 117vw;
+    }
+    .experts_world .experts_world_block .img img {
+        width: 100%;
+        height: 63vw;
+        min-height: 30.667vw;
+        -o-object-fit: cover;
+        object-fit: cover;
+        display: block;
+    }
+    .experts_world .experts_world_block .img {
+        height: 66.667vw;
+    }
+    .experts_world .experts_world_block .content .country {
+        font-size: 3.04vw;
+        line-height: 3.46vw;
+    }
+    .experts_world .experts_world_block .content .name_surname {
+        font-size: 4.56vw;
+        line-height: 6.08vw;
+    }
+    .experts_world .experts_world_block .content li {
+        font-size: 3vw;
+        line-height: 4.15vw;
+    }
+    .experts_world .experts_world_block .content li img {
+        width: 5.25vw;
+    }
+    .experts_world .experts_world_block .content {
+        width: 100%;
+        height: 95vw;
+        padding: 3.08vw;
+    }
+    .experts_world .swiper .swiper-slide {
+        height: 144vw;
     }
 }
 

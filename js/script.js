@@ -77,6 +77,10 @@ play_paused_review.forEach((elem) => {
   });
 
   elem.addEventListener("click", function () {
+    let review_video_weapper=document.querySelectorAll('.review_video_weapper');
+    review_video_weapper.forEach((element)=>{
+      element.children[0].pause();
+    })
     let play_review = this.children[0];
     let paused_review = this.children[1];
 
@@ -343,14 +347,15 @@ const swiperProgram = new Swiper(".swiper-experts-word", {
   },
   breakpoints: {
     320: {
-      spaceBetween: 10,
+      spaceBetween: 0,
       pagination: {
         el: ".swiper-pagination-program",
         type: "bullets",
       },
     },
     670: {
-      spaceBetween: 10,
+      spaceBetween: 0,
+      
     },
     1080: {
       spaceBetween: 30,

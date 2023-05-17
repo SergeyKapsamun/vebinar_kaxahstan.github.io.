@@ -146,13 +146,13 @@ body {
     .play_paused_review {
         position: relative;
         width: 100%;
-        height: 85%;
+        height: 100%;
         cursor: pointer;
 
         img {
             position: absolute;
             left: 47%;
-            top: 52%;
+            top: 46%;
         }
         .play_review {
             display: block;
@@ -517,6 +517,7 @@ body {
     .subtitle {
         font-size: 1.25vw;
         line-height: 1.771vw;
+        margin-top: 2.08vw;
     }
 }
 .title_age {
@@ -527,10 +528,12 @@ body {
     padding-top: 7.813vw;
 }
 .subtitle_age {
-    font-weight: 600;
     font-size: 1.042vw;
     line-height: 1.563vw;
     text-align: center;
+    span {
+        font-weight: 600;
+    }
 }
 // <--------------education------------->
 // <--------------video_wrapper------------->
@@ -1609,6 +1612,7 @@ body {
             .socials {
                 margin-left: 10px;
                 display: flex;
+                display: none;
 
                 a {
                     &:nth-child(1) {
@@ -2232,10 +2236,13 @@ body {
 // <--------------------footer--------------->
 
 // <----------------- what_is_there----------->
+.back_what_is_there {
+    background: linear-gradient(180deg, rgba(245, 247, 245, 0) 0%, #f5f7f5 100%);
+}
 .what_is_there {
     padding: 6.25vw 0;
     position: relative;
-    background: linear-gradient(180deg, rgba(245, 247, 245, 0) 0%, #f5f7f5 100%);
+
     .swiper_what_is_there {
         overflow: hidden;
         padding-top: 1.56vw;
@@ -2329,6 +2336,13 @@ body {
         position: absolute;
 
         left: 0px;
+        bottom: 0px;
+        width: 9.58vw;
+    }
+    .crosess_right {
+        position: absolute;
+
+        right: 0px;
         bottom: 0px;
         width: 9.58vw;
     }
