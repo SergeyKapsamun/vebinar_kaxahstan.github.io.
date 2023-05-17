@@ -75,26 +75,25 @@ play_paused_review.forEach((elem) => {
     let play_review = elem.children[0];
     play_review.style.display = "block";
     elem.style.display = "block";
-    elem.previousElementSibling.removeAttribute('controls')
+    elem.previousElementSibling.removeAttribute("controls");
   });
 
   elem.addEventListener("click", function () {
     let play_review = this.children[0];
     let paused_review = this.children[1];
-    let review_video_weapper=document.querySelectorAll('.review_video_weapper');
-    review_video_weapper.forEach((element)=>{
+    let review_video_weapper = document.querySelectorAll(
+      ".review_video_weapper"
+    );
+    review_video_weapper.forEach((element) => {
       swiperReviewVideo.slideTo(swiperReviewVideo.clickedIndex);
       element.children[0].pause();
-    })
-    
+    });
 
-
-    if(this.previousElementSibling.paused==true){
-       this.previousElementSibling.play();
-      this.style.display='none'
-      this.previousElementSibling.setAttribute('controls','controls')
+    if (this.previousElementSibling.paused == true) {
+      this.previousElementSibling.play();
+      this.style.display = "none";
+      this.previousElementSibling.setAttribute("controls", "controls");
     }
-
   });
 });
 
@@ -293,18 +292,18 @@ const swiperReviewVideo = new Swiper(".swiper-review-video", {
   // Default parameters
   slidesPerView: "auto",
   spaceBetween: 0,
-  centeredSlides: true,
+  loop: true,
 
- pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
   navigation: {
     nextEl: ".swiper-button-next-review-video",
     prevEl: ".swiper-button-prev-review-video",
   },
 });
-// swiperReviewVideo.slideTo(2);
+swiperReviewVideo.slideTo(2);
 const what_is_there_one = new Swiper(".what_is_there_one", {
   // Default parameters
   slidesPerView: 1,
@@ -358,7 +357,6 @@ const swiperProgram = new Swiper(".swiper-experts-word", {
     },
     670: {
       spaceBetween: 0,
-      
     },
     1080: {
       spaceBetween: 30,
