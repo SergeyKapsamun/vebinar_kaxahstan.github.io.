@@ -292,17 +292,18 @@ const swiperReviewVideo = new Swiper(".swiper-review-video", {
   // Default parameters
   slidesPerView: "auto",
   spaceBetween: 0,
+  centeredSlides: true,
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
   navigation: {
     nextEl: ".swiper-button-next-review-video",
     prevEl: ".swiper-button-prev-review-video",
   },
 });
-// swiperReviewVideo.slideTo(2);
+swiperReviewVideo.slideTo(2);
 const what_is_there_one = new Swiper(".what_is_there_one", {
   // Default parameters
   slidesPerView: 1,
