@@ -132,7 +132,28 @@ marker.forEach((elem) => {
     this.classList.toggle("active_marker");
   });
 });
-
+const wrapper__homeSendApplication = document.querySelector(
+  ".wrapper__home-send-application"
+);
+const homeMidle__rightBottomMobile = document.querySelector(
+  ".home-midle__right-bottom-mobile"
+);
+homeMidle__rightBottomMobile.addEventListener("click", () => {
+  wrapper__homeSendApplication.style.display = "flex";
+});
+const homeSenClosed = document.querySelector(".home-sen_closed");
+homeSenClosed.addEventListener("click", function () {
+  this.parentElement.parentElement.style.display = "none";
+});
+const wrapperSendEmail = document.querySelector(".wrapper-send-email");
+const btnGetPdfMobile = document.querySelector(".btn_get_pdf-mobile");
+const sendEmail_closed = document.querySelector(".send-email_closed");
+sendEmail_closed.addEventListener("click", function () {
+  this.parentElement.parentElement.style.display = "none";
+});
+btnGetPdfMobile.addEventListener("click", function () {
+  wrapperSendEmail.style.display = "flex";
+});
 // faq
 const faq = document.querySelectorAll("[faq-js] .item");
 
@@ -258,6 +279,7 @@ const swiperReview = new Swiper(".swiper-review", {
   // Default parameters
   slidesPerView: 2,
   spaceBetween: 20,
+
   breakpoints: {
     // when window width is >= 320px
     320: {
@@ -268,12 +290,13 @@ const swiperReview = new Swiper(".swiper-review", {
         type: "bullets",
       },
     },
-    670: {
+    760: {
       slidesPerView: 2,
       spaceBetween: 10,
       pagination: {
         el: ".swiper-pagination-review",
         type: "bullets",
+        clickable: true,
       },
     },
     // when window width is >= 640px
@@ -293,16 +316,12 @@ const swiperReviewVideo = new Swiper(".swiper-review-video", {
   slidesPerView: "auto",
   spaceBetween: 0,
   centeredSlides: true,
-
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
   navigation: {
     nextEl: ".swiper-button-next-review-video",
     prevEl: ".swiper-button-prev-review-video",
   },
 });
+
 swiperReviewVideo.slideTo(2);
 const what_is_there_one = new Swiper(".what_is_there_one", {
   // Default parameters

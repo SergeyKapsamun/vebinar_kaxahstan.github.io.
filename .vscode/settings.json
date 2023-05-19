@@ -1,3 +1,10 @@
 {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "pxVwConverter.breakpoints": {
+
+        "styled": 1440,
+        "desktop": 1440,
+        "tablet": 760,
+        "mobile": 375
+    }
 }
