@@ -271,14 +271,16 @@ const swiperPersonal = new Swiper(".swiper-personal", {
     },
   },
 });
-
-const review_closed = document.querySelector(".review_closed");
-review_closed.addEventListener("click", function () {
-  this.parentElement.style.visibility = "hidden";
-});
 const doctors_reviews_more_wrapper = document.querySelector(
   ".doctors_reviews_more_wrapper"
 );
+const review_closed = document.querySelectorAll(".review_closed");
+review_closed.forEach((closed) => {
+  closed.addEventListener("click", function () {
+    doctors_reviews_more_wrapper.style.visibility = "hidden";
+  });
+});
+
 const details_review = document.querySelectorAll(".details_review");
 details_review.forEach((elem) => {
   elem.addEventListener("click", function () {
@@ -355,3 +357,14 @@ const ModalContent = document.querySelector(".modal__content");
 HeaderBtn.addEventListener("click", function () {
   ModalContent.parentElement.classList.add("active");
 });
+
+const getparams = window.location.search
+  .replace("?", "")
+  .split("&")
+  .reduce(function (p, e) {
+    var a = e.split("=");
+    if (a[0] && a[1]) p[decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+    return p;
+  }, {});
+if (getparams["experts_world_slide"])
+  swiperProgram.slideTo(getparams["experts_world_slide"]);
