@@ -1,7 +1,8 @@
 jQuery(document).ready(() => {
   jQuery(".phone-mask").mask("+7 (999) 999-99-99");
-
+  console.log(jQuery("[data-modal]"));
   jQuery("[data-modal]").on("click", function (e) {
+    console.log("1");
     e.preventDefault();
     const id = jQuery(this).attr("data-modal");
     openModal(id);
@@ -42,6 +43,7 @@ jQuery(document).ready(() => {
   // });
   jQuery("#feedback .modal__form").on("submit", function (e) {
     e.preventDefault();
+    console.log("yes");
     sendMail("form_3", getDataForm($(this)));
   });
 

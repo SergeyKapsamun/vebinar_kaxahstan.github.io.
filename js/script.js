@@ -305,14 +305,17 @@ const ClosedBuyVebinar = document.querySelectorAll(
 BuyVebinarButton_1.addEventListener("click", () => {
   BuyVebinarBack.style.display = "flex";
   BuyVebinarButtonForm_1.style.display = "block";
+  document.body.style.overflow = "hidden";
 });
 BuyVebinarButton_2.addEventListener("click", () => {
   BuyVebinarBack.style.display = "flex";
   BuyVebinarButtonForm_2.style.display = "block";
+  document.body.style.overflow = "hidden";
 });
 BuyVebinarButton_3.addEventListener("click", () => {
   BuyVebinarBack.style.display = "flex";
   BuyVebinarButtonForm_3.style.display = "block";
+  document.body.style.overflow = "hidden";
 });
 
 ClosedBuyVebinar.forEach((close) => {
@@ -321,6 +324,7 @@ ClosedBuyVebinar.forEach((close) => {
     BuyVebinarButtonForm_1.style.display = "none";
     BuyVebinarButtonForm_2.style.display = "none";
     BuyVebinarButtonForm_3.style.display = "none";
+    document.body.style.overflow = "auto";
   });
 });
 
@@ -352,11 +356,11 @@ play_paused_review.forEach((elem) => {
   });
 });
 
-const HeaderBtn = document.querySelector(".header__btn");
-const ModalContent = document.querySelector(".modal__content");
-HeaderBtn.addEventListener("click", function () {
-  ModalContent.parentElement.classList.add("active");
-});
+// const HeaderBtn = document.querySelector(".header__btn");
+// const ModalContent = document.querySelector(".modal__content");
+// HeaderBtn.addEventListener("click", function () {
+//   ModalContent.parentElement.classList.add("active");
+// });
 
 const getparams = window.location.search
   .replace("?", "")
