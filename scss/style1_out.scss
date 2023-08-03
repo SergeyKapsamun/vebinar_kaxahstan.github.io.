@@ -224,6 +224,7 @@ body {
 // <--------------home------------->
 .home-midle__right-bottom-mobile {
     display: none;
+    color: white;
 }
 // .home {
 //     width: 100%;
@@ -1042,7 +1043,8 @@ body {
             display: flex;
             text-align: center;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: center;
+            gap: 10px;
             background: linear-gradient(307deg, #82d982 0%, #5ccc81 100%),
                 linear-gradient(315deg, #5ccc81 34.9%, #a4eba4 100%), #fff;
             cursor: pointer;
@@ -1188,9 +1190,11 @@ body {
         width: 112%;
     }
     .swiper-pagination-review {
-        position: relative;
-        left: 47%;
-        bottom: 0px;
+        position: absolute;
+        display: block;
+        left: 35% !important;
+        bottom: 9px !important;
+        z-index: 1;
     }
 
     .review-block {
@@ -2379,7 +2383,7 @@ body {
     }
     &__cost {
         font-size: 54px;
-        font-weight: 400;
+        font-weight: 600;
         padding-top: 40px;
         span {
             color: rgba(255, 255, 255, 0.3);
@@ -2417,11 +2421,97 @@ body {
     }
 }
 
+// .information-for-buy {
+//     background: #fff;
+//     padding: 30px 40px;
+//     color: #42474d;
+//     border-radius: 0 0 30px 30px;
+//     &__title {
+//         font-size: 24px;
+//         line-height: 28px;
+//         font-weight: 500;
+//         text-align: center;
+//         display: none;
+//     }
+//     &__tel-email {
+//         display: flex;
+//         gap: 20px;
+//     }
+//     input {
+//         width: 100%;
+//         padding: 20px 0px;
+//         font-size: 18px;
+//         outline: none;
+//         border: none;
+//         border-bottom: 0.6px solid var(--faint-w-line, #dae3f1);
+//     }
+//     &__conditions {
+//         display: flex;
+//         align-items: center;
+//         gap: 10px;
+//         margin: 40px 0;
+//         a {
+//             color: #42474d;
+//         }
+//         input[type="checkbox"] {
+//             display: none;
+//         }
+//         label {
+//             background: rgba(242, 244, 247, 1);
+//             border-radius: 50%;
+//             cursor: pointer;
+//             position: relative;
+//             z-index: 1;
+//             width: 26px;
+//             height: 24px;
+//         }
+//         input[id="for-buy_1"]:checked + label:after,
+//         input[id="for-buy_2"]:checked + label:after,
+//         input[id="for-buy_3"]:checked + label:after {
+//             position: relative;
+//             top: 1px;
+//             left: 6px;
+//             content: "\2714";
+//             font-size: 14px;
+//             color: #5ccc81;
+//         }
+//     }
+//     &__buttons {
+//         display: flex;
+//         text-align: center;
+//         font-size: 18px;
+//         font-weight: 600;
+//         gap: 20px;
+
+//         & > div {
+//             padding: 20px;
+//             width: 50%;
+//             background: #f2f4f7;
+//             border-radius: 30px;
+//             cursor: pointer;
+//         }
+//     }
+//     &__btn-buy {
+//         transition: all 0.5s;
+//         color: #fff;
+//         line-height: 43px;
+//     }
+//     &__get-inform {
+//         color: #42474d;
+//     }
+// }
+
+// .buy-vebinar,
+// .buy-vebinar--18,
+// .buy-vebinar--19,
+// .buy-vebinar--18-19 {
+//     display: none;
+// }
 .information-for-buy {
     background: #fff;
-    padding: 30px 40px;
+    padding: 1.5625vw 2.083333333333333vw;
     color: #42474d;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 1.5625vw 1.5625vw;
     &__title {
         font-size: 24px;
         line-height: 28px;
@@ -2431,21 +2521,21 @@ body {
     }
     &__tel-email {
         display: flex;
-        gap: 20px;
+        gap: 1.0416666666666665vw;
     }
     input {
         width: 100%;
-        padding: 20px 0px;
-        font-size: 18px;
+        padding: 1.0416666666666665vw 0.3125vw;
+        font-size: 0.9375vw;
         outline: none;
         border: none;
-        border-bottom: 0.6px solid var(--faint-w-line, #dae3f1);
+        border-bottom: 0.1125vw solid var(--faint-w-line, #dae3f1);
     }
     &__conditions {
         display: flex;
         align-items: center;
-        gap: 10px;
-        margin: 40px 0;
+        gap: 0.5208333333333333vw;
+        margin: 2.083333333333333vw 0;
         a {
             color: #42474d;
         }
@@ -2458,39 +2548,47 @@ body {
             cursor: pointer;
             position: relative;
             z-index: 1;
-            width: 26px;
+            width: 24px;
             height: 24px;
         }
         input[id="for-buy_1"]:checked + label:after,
         input[id="for-buy_2"]:checked + label:after,
         input[id="for-buy_3"]:checked + label:after {
             position: relative;
-            top: 1px;
-            left: 6px;
+            top: -0.2vw;
+            left: 0.3125vw;
             content: "\2714";
-            font-size: 14px;
+            font-size: 0.7291666666666666vw;
             color: #5ccc81;
+        }
+        .for-buy_1:has(p),
+        .for-buy_2:has(p),
+        .for-buy_3:has(p) {
+            display: block;
+            width: 100%;
+            background-color: white;
+            height: auto;
         }
     }
     &__buttons {
         display: flex;
         text-align: center;
-        font-size: 18px;
+        font-size: 0.9375vw;
         font-weight: 600;
-        gap: 20px;
+        gap: 1.0416666666666665vw;
 
         & > div {
-            padding: 20px;
+            padding: 1.0416666666666665vw;
             width: 50%;
             background: #f2f4f7;
-            border-radius: 30px;
+            border-radius: 1.5625vw;
             cursor: pointer;
         }
     }
     &__btn-buy {
         transition: all 0.5s;
         color: #fff;
-        line-height: 43px;
+        line-height: 2.2395833333333335vw;
     }
     &__get-inform {
         color: #42474d;
@@ -2503,7 +2601,6 @@ body {
 .buy-vebinar--18-19 {
     display: none;
 }
-
 //modal
 .modal {
     position: fixed;
@@ -2715,4 +2812,14 @@ body {
     gap: 10px;
     margin-top: 0;
     margin-bottom: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background: linear-gradient(95.64deg, #6cd990 0%, #5ccc81 100%);
+    width: 40px;
+    border-radius: 6px;
+}
+
+.swiper-pagination-bullet {
+    transition: 0.2s;
 }

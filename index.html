@@ -23,7 +23,7 @@
 
 
 <body>
-    <a href="?experts_world_slide=5#experts_world" onclick="event.preventDefault()">test</a>
+    <!-- <a href="?experts_world_slide=5#experts_world" onclick="event.preventDefault()">test</a> -->
     <!-- ==============hide_bloks========== -->
     <!-- отзывы докторов при нажатии подробнее -->
     <div class="swiper doctors_reviews_more_wrapper">
@@ -347,9 +347,12 @@
                     </div>
                     <div class="information-for-buy__conditions">
                         <input id="for-buy_2" type="checkbox"> <label for="for-buy_2"></label>
-                        <p>Я согласен с условиями и <a href="#">политикой конфиденциальности</a> и <a
-                                href="#">оброботкой
-                                персональных данных</a></p>
+                        <label class="for-buy_2" for="for-buy_2">
+                            <p>Я согласен с условиями и <a href="#">политикой конфиденциальности</a> и <a
+                                    href="#">оброботкой
+                                    персональных данных</a></p>
+                        </label>
+
                     </div>
                 </div>
 
@@ -432,7 +435,7 @@
                             </span>
                         </a>
 
-                        <a href="#" class="btn header__btn">
+                        <a href="#" class="btn header__btn" data-modal="">
                             <img src="images/header/phone_white.svg" alt="">
                             <span>
                                 Обратный звонок
@@ -498,16 +501,18 @@
                             <div class="button_accept">Принять участие <img
                                     src="./images/home-midle/Arrow_Right_black.svg" alt=""></div>
                         </div>
+                        <a href="#home-midle__right-bottom-mobile">
+                            <div class="home-midle__right-bottom-mobile">
+                                Принять участие <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14"
+                                    viewBox="0 0 43 14" fill="none">
+                                    <path d="M40.6608 7L1.5 7" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M34.7866 1L41.4999 7L34.7866 13" stroke="white" stroke-width="1.5"
+                                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </a>
 
-                        <div class="home-midle__right-bottom-mobile">
-                            Принять участие <svg xmlns="http://www.w3.org/2000/svg" width="43" height="14"
-                                viewBox="0 0 43 14" fill="none">
-                                <path d="M40.6608 7L1.5 7" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M34.7866 1L41.4999 7L34.7866 13" stroke="white" stroke-width="1.5"
-                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
 
                     </div>
                 </div>
@@ -945,7 +950,7 @@
 
     <!-- // <--------------cost_travel------------->
     <section>
-        <div class="cost-travel">
+        <div class="cost-travel" id="">
             <div class="cost_travel_wrapper"> </div>
 
 
@@ -1023,7 +1028,7 @@
 
                                 <span>8 800₽</span>
                             </div>
-                            <div class="salary">10000₽</div>
+                            <div class="salary">10 000₽</div>
 
 
                         </div>
@@ -1635,11 +1640,11 @@
     <div class="modal" id="phone-mobile">
         <div class="modal__content">
             <div class="modal__cross" data-modal-close="phone-mobile">
-                <img src="<?= get_template_directory_uri() ?>/images/icons/cross.png">
+                <img src="./images/icons/cross.png">
             </div>
 
             <div class="phone-mobile__btns">
-                <a href="tel:<?= get_field('телефон_ссылка') ?>" class="modal__btn modal__btn_phone">
+                <a href="tel:   +7 (495) 186-29-61" class="modal__btn modal__btn_phone">
                     <img src="<?= get_template_directory_uri() ?>/images/header/phone_white.svg">
                     Вызвать:
                     +7 (495) 186-29-61
@@ -1656,7 +1661,7 @@
     <div class="modal" id="feedback">
         <div class="modal__content">
             <div class="modal__cross" data-modal-close="feedback">
-                <img src="<?= get_template_directory_uri() ?>/images/icons/cross.png">
+                <img src="./images/icons/cross.png">
             </div>
 
             <div class="modal__title">Обратный звонок</div>

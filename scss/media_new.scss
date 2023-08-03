@@ -27,6 +27,7 @@
     // }
     .home_midle_left .intensivFromSchool {
         font-size: 14px;
+        margin-bottom: 10px;
     }
     // .home_midle_left {
     //     width: 50%;
@@ -40,14 +41,15 @@
 
     .home_midle_left p {
         font-size: 14px;
-        margin-top: 10px;
+        margin-top: 20px;
     }
     .home_midle_left .upec {
         font-size: 14px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         span {
             font-size: 10px;
             padding: 4px 10px;
+            border-radius: 20px;
         }
     }
     .home_midle_left .companies {
@@ -71,9 +73,13 @@
         font-size: 10px;
     }
     .home_midle_right .home_midle_right_top .interval {
-        padding: 10px 0;
-        // width: 20%;
+        padding: 10px 14px;
+        width: auto;
         border-radius: 14px;
+        .line {
+            width: 1vw;
+            margin: 0 4px;
+        }
     }
     .home_midle_right .home_midle_right_top .country_city .country {
         display: flex;
@@ -175,11 +181,11 @@
     .cards {
         position: absolute;
         bottom: -633px;
-        left: 0;
+        left: 14px;
         flex-direction: column;
         gap: 10px;
         .card {
-            width: 100%;
+            width: 95.5%;
         }
     }
     .container {
@@ -257,7 +263,7 @@
 
 @media (max-width: 550px) {
     .education {
-        margin-top: 660px;
+        margin-top: 670px;
         flex-direction: column-reverse;
         gap: 20px;
     }
@@ -290,7 +296,7 @@
 @media screen and (max-width: 850px) {
     .multi-title {
         font-size: 24px;
-        margin-bottom: 20px;
+        margin-bottom: 11px;
     }
     .scientific-program {
         border-radius: 20px;
@@ -318,6 +324,7 @@
                 padding: 4px 6px;
                 gap: 4px;
                 white-space: nowrap;
+                font-weight: 400;
                 span {
                     width: 6px;
                     height: 6px;
@@ -355,6 +362,9 @@
 }
 
 @media screen and (max-width: 450px) {
+    .wrapper-scientific-program {
+        padding: 40px 0;
+    }
     .wrapper-scientific-program .container {
         padding: 0;
         overflow: hidden;
@@ -456,6 +466,10 @@
 }
 
 @media screen and (max-width: 550px) {
+    .experts_world {
+        border-radius: 20px;
+        padding: 0 0 80px 0;
+    }
     .experts_world .experts_world_top .experts_world_top_arrows {
         display: none;
     }
@@ -485,8 +499,9 @@
     }
     .cost-travel .right_block .button_accept,
     .cost-travel .right_block .button-information {
+        padding: 12px 21px;
         font-size: 12px;
-        line-height: 12px;
+        line-height: 16px;
         img {
             width: 30px;
         }
@@ -537,15 +552,20 @@
     .information-for-participation__wrapper_right {
         font-size: 8px;
     }
-    .information-for-participation__status {
-        padding: 4px 6px 4px 10px;
-        &::before {
-            width: 6px;
-            height: 6px;
-            left: 12px;
-            top: 6px;
+    .information-for-participation {
+        &__status {
+            padding: 4px 14px 4px 24px;
+            font-size: 12px;
+            margin-bottom: 6px;
+            &::before {
+                width: 6px;
+                height: 6px;
+                left: 12px;
+                top: 9px;
+            }
         }
     }
+
     .information-for-participation__for {
         font-size: 12px;
     }
@@ -710,11 +730,15 @@
     .review-items .review-block {
         padding: 14px;
         border-radius: 20px;
+        .content {
+            margin-bottom: 18px;
+        }
     }
     .review-items .review-block .top .person .img {
         min-width: 60px;
         width: auto;
         height: 60px;
+        margin: auto;
     }
     .review-items .arrow-review {
         top: 113px;
@@ -732,15 +756,18 @@
     }
     .review-video {
         min-height: 300px;
+        margin: auto;
     }
 }
 @media screen and (max-width: 759px) {
     .review-items {
         max-width: 310px;
+        margin-bottom: 20px;
     }
     .review-items .review-block .top .person {
         flex-direction: column;
         gap: 10px;
+        width: 100%;
     }
 
     .review-items .review-block .top .person .info {
@@ -782,6 +809,10 @@
     }
 }
 @media screen and (max-width: 1022px) {
+    .faq {
+        padding: 0 0 40px 0;
+        background: #fff;
+    }
     .faq-items {
         width: 100%;
     }
@@ -826,6 +857,9 @@
 }
 //tg
 @media screen and (max-width: 1022px) {
+    .tg-qr {
+        padding: 20px 0;
+    }
     .tg-qr-block .qr-code {
         width: 100px;
         height: 100px;
@@ -853,7 +887,7 @@
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-
+        text-align: center;
         gap: 10px;
     }
 }
@@ -931,6 +965,12 @@
     }
     .footer-copyright {
         padding: 10px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        .wrapper {
+            gap: 14px;
+        }
     }
 }
 

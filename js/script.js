@@ -167,7 +167,7 @@ const swiperReview = new Swiper(".swiper-review", {
       spaceBetween: 10,
       pagination: {
         el: ".swiper-pagination-review",
-        type: "custom",
+        type: "bullets",
         clickable: true,
       },
     },
